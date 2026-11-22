@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ember Court — a card duel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="table">
+  <div id="topbar">
+    <div class="brand">EMBER <span>COURT</span></div>
+    <div id="round">Round 1</div>
+    <div id="score">Score 0</div>
+    <button id="muteBtn" type="button">🔊 Sound on</button>
+  </div>
+
+  <div class="side" id="aiSide">
+    <div class="side-row">
+      <div class="duelist-name"><span id="aiName">Ashwarden</span><span class="tag">THE WARDEN</span></div>
+      <div class="life-row" id="aiLife"></div>
+    </div>
+    <div class="ember-row"><span class="ember-label">EMBER</span><span id="aiEmber"></span><span class="hand-count" id="aiCount"></span></div>
+    <div class="hand" id="aiHand"></div>
+  </div>
+
+  <div id="middle">
+    <div id="played"></div>
+    <div id="logPanel">
+      <h3>DUEL LOG</h3>
+      <ul id="log"></ul>
+    </div>
+  </div>
+
+  <div class="side" id="playerSide">
+    <div class="hand" id="playerHand"></div>
+    <div class="side-row">
+      <div class="duelist-name"><span id="playerName">You</span><span class="tag">CHALLENGER</span></div>
+      <div class="life-row" id="playerLife"></div>
+    </div>
+    <div class="ember-row"><span class="ember-label">EMBER</span><span id="playerEmber"></span><span class="hand-count" id="playerCount"></span></div>
+  </div>
+
+  <div id="bottombar">
+    <div id="turnBanner"></div>
+    <div id="surgeBanner"></div>
+    <button id="endTurn" type="button">End Turn ⏎</button>
+  </div>
+</div>
+
+<div id="overlay"></div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
